@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu Click to Start.unity
+    guid: 01d7f53c5bd3aeb418f6876b5599f50a
+  - enabled: 1
+    path: Assets/Scenes/characterSelection.unity
+    guid: a0255e240ce3aa048be7599f9f2e9a54
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Defeat Scene.unity
+    guid: 4bc3110204e328446a889d6a493a27f1
+  - enabled: 1
+    path: Assets/Scenes/Level2Load.unity
+    guid: 6fffcfc06d3f1a848a72412b7e91cb47
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 92a660abd59f26640afb55b6b65be371
+  m_configObjects: {}
