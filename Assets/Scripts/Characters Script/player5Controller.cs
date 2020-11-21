@@ -164,6 +164,8 @@ public class player5Controller : MonoBehaviour
             }
         }
 
+        
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -191,6 +193,24 @@ public class player5Controller : MonoBehaviour
                 myAnim.Play("Herohurt");
                 StartCoroutine(kbackScript.instance.Knockback(0.02f, 1400, kbackScript.instance.transform.position));
 
+                StartCoroutine(Idle());
+
+            }
+        }
+
+        if (other.gameObject.tag == "bossMelee")
+        {
+            if (isAttacked == false)
+            {
+                StartCoroutine(Attacked());
+
+                print("yes");
+                currentHealth -= 5;
+                myAnim.Play("Hero5 TakeHit");
+                healthBar.SetHealth(currentHealth);
+
+                myAnim.Play("Herohurt");
+                StartCoroutine(kbackScript.instance.Knockback(0.02f, 1400, kbackScript.instance.transform.position));
                 StartCoroutine(Idle());
 
             }

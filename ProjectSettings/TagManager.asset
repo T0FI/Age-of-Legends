@@ -16,6 +16,7 @@ TagManager:
   - skeletonHitBox
   - Heart
   - TrashEnemy
+  - bossMelee
   layers:
   - Default
   - TransparentFX

@@ -9415,6 +9415,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton Monster6
       objectReference: {fileID: 0}
+    - target: {fileID: 8644137107838889158, guid: 49695a151132e3847a768ed1c12e7fa2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644137108942866950, guid: 49695a151132e3847a768ed1c12e7fa2,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644137108942866952, guid: 49695a151132e3847a768ed1c12e7fa2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49695a151132e3847a768ed1c12e7fa2, type: 3}
 --- !u!1001 &3293699194827788396
