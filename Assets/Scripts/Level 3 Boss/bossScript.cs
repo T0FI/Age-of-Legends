@@ -18,7 +18,22 @@ public class bossScript : MonoBehaviour
     public GameObject Hero4;
     public GameObject Hero5;
 
+    public GameObject AttackR;
+    public GameObject AttackL;
+
+    Animator animator;
+
     public bool isFlipped = false;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+
+    }
 
     public void FlipTowardsThePlayer()
     {

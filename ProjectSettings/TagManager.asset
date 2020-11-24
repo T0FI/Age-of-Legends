@@ -17,6 +17,10 @@ TagManager:
   - Heart
   - TrashEnemy
   - bossMelee
+  - bPosL
+  - bPosR
+  - AttackPosR
+  - AttackPosL
   layers:
   - Default
   - TransparentFX

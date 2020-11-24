@@ -223,7 +223,7 @@ public class player5Controller : MonoBehaviour
     IEnumerator Attacked()
     {
         isAttacked = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         isAttacked = false;
     }
 

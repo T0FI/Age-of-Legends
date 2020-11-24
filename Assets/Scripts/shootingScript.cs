@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 public class shootingScript : MonoBehaviour
 {
+    // https://www.youtube.com/watch?v=K4loGbMWm80&t=5s&ab_channel=TheGameDev_
+
     public float shootSpeed, shootTimer;
     public Transform shootPos;
     public GameObject arrow;
