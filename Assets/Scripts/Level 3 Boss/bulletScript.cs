@@ -46,6 +46,11 @@ public class bulletScript : MonoBehaviour
         {
             
         }
+
+        if (collision.gameObject.tag == "Player")
+        {
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        }
     }
 
     void Update()
@@ -63,6 +68,7 @@ public class bulletScript : MonoBehaviour
         
         
     }
+
 
     IEnumerator DestroyMiss()
     {

@@ -236,7 +236,7 @@ public class trashMonster4 : MonoBehaviour
             myAnim.Play("Trash TakeHit");
             eHealth -= heroDamage.heroADamage;
             print(eHealth);
-            StartCoroutine(CheckHealth());
+            StartCoroutine(Attacked());
         }
     }
 
@@ -263,13 +263,9 @@ public class trashMonster4 : MonoBehaviour
         myAnim.Play("Trash Walk");
     }
 
-    IEnumerator CheckHealth()
+    IEnumerator Attacked()
     {
-
         speed = 2;
-
-
-
         yield return new WaitForSeconds(.4f);
         speed = 5;
         myAnim.Play("Trash canSeePlayer");

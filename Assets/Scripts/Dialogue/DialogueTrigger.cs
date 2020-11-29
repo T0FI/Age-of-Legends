@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public GameObject King;
 
 
     void OnTriggerEnter2D(Collider2D other)
@@ -14,7 +15,10 @@ public class DialogueTrigger : MonoBehaviour
             {
 
             FindObjectOfType<dialogueManager>().StartDialogue(dialogue);
-            }
+            FindObjectOfType<audioManager>().Play("KingTrigger");
+            King.GetComponent<BoxCollider2D>().enabled = false;
+
+        }
         }
 
 

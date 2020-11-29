@@ -73,7 +73,7 @@ public class player5Controller : MonoBehaviour
         if ((Input.GetButtonDown("Fire1") && !isAttacking))
         {
             isAttacking = true;
-
+            FindObjectOfType<audioManager>().Play("Player Attack Sword");
             maxSpeed = 5;
 
             //Choose a random attack animation to play

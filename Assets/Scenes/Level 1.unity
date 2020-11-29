@@ -360,6 +360,110 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &65101809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65101811}
+  - component: {fileID: 65101810}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &65101810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65101809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ba9021a7bd6b94389dc592d1bc834f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: KingTrigger
+    clip: {fileID: 8300000, guid: aaa9345fc5b00ea40b9cb0abb4bfa928, type: 3}
+    volume: 0.718
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy Death
+    clip: {fileID: 8300000, guid: 7e30d053d6089fb428c51b9eb4056c0e, type: 3}
+    volume: 0.31
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &65101811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65101809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -173.56221, y: -5.447804, z: -1553.7926}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &96450198
 GameObject:
   m_ObjectHideFlags: 0
@@ -4593,7 +4697,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.29, y: 0.79}
+  m_Size: {x: 1.29, y: 5.15}
   m_EdgeRadius: 0
 --- !u!212 &1016643586
 SpriteRenderer:
@@ -4705,6 +4809,7 @@ MonoBehaviour:
     - Please help!
     - The wizards are trying to spawn a demon!...
     - Stop them!
+  King: {fileID: 1016643583}
 --- !u!111 &1016643590
 Animation:
   m_ObjectHideFlags: 0
@@ -4732,7 +4837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b467827c6e8cc7849800c348d57d93c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 7.21
 --- !u!4 &1058987006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8069817234523085268, guid: 908a27ae0638ba242bdced5c89e25406,

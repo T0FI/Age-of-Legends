@@ -21,12 +21,22 @@ public class bossScript : MonoBehaviour
     public GameObject AttackR;
     public GameObject AttackL;
 
+    public GameObject Boss;
+
+    int maxHealth = 100;
+    public static int bossHealth;
+    public bossHealth healthBar;
+
     Animator animator;
 
     public bool isFlipped = false;
 
     private void Start()
     {
+
+        bossHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
         animator = GetComponent<Animator>();
     }
 
@@ -34,6 +44,40 @@ public class bossScript : MonoBehaviour
     {
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "attackHitBox")
+        {
+            bossHealth -= heroDamage.heroADamage;
+            healthBar.SetHealth(bossHealth);
+            StartCoroutine(Attacked());
+        }
+    }
+
+    IEnumerator Attacked()
+    {
+        animator.Play("Boss TakeHit");
+        yield return new WaitForSeconds(.1f);
+        checkHealth();
+    }
+
+    void checkHealth()
+    {
+        if (bossHealth <= 50)
+        {
+            StartCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+        }
+
+        if (bossHealth <= 0)
+        {
+            StopAllCoroutines();
+            animator.Play("Boss Death");
+            Boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            Boss.GetComponent<CapsuleCollider2D>().enabled = false;
+        }
+    }
+
 
     public void FlipTowardsThePlayer()
     {
