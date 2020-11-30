@@ -161,6 +161,7 @@ public class player5Controller : MonoBehaviour
 
         
 
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -271,14 +272,14 @@ public class player5Controller : MonoBehaviour
 
     IEnumerator DoAttack()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.4f);
         maxSpeed = 18;
         isAttacking = false;
     }
 
     IEnumerator DoAttackInAir()
     {
-        yield return new WaitForSeconds(.2f);
+        yield return new WaitForSeconds(.4f);
         myAnim.Play("Hero5 Fall");
         maxSpeed = 18;
         isAttacking = false;

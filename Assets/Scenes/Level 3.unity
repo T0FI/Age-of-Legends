@@ -470,7 +470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207278104}
   - component: {fileID: 207278105}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attack2HitBox
   m_TagString: attackHitBox
   m_Icon: {fileID: 0}
@@ -696,8 +696,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.16000366, y: 0}
+  m_SizeDelta: {x: -31.839905, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &240965853
 MonoBehaviour:
@@ -1192,6 +1192,7 @@ GameObject:
   - component: {fileID: 521472868}
   - component: {fileID: 521472867}
   - component: {fileID: 521472866}
+  - component: {fileID: 521472872}
   m_Layer: 9
   m_Name: Hero2
   m_TagString: Player
@@ -1267,7 +1268,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.041647032}
+  m_Offset: {x: 0, y: 0.027212337}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1278,7 +1279,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.32670596}
+  m_Size: {x: 0.17, y: 0.2978363}
   m_EdgeRadius: 0
 --- !u!95 &521472869
 Animator:
@@ -1371,6 +1372,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &521472872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521472864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2842953730c7c1744be0f9a7ec765062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592453220
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1625,7 @@ GameObject:
   - component: {fileID: 742921000}
   - component: {fileID: 742920999}
   - component: {fileID: 742920998}
+  - component: {fileID: 742921005}
   m_Layer: 9
   m_Name: Hero1
   m_TagString: Player
@@ -1687,7 +1701,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: 0.043373637}
+  m_Offset: {x: 0.03986595, y: -0.011066377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1698,7 +1712,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.47325265}
+  m_Size: {x: 0.1697319, y: 0.36213273}
   m_EdgeRadius: 0
 --- !u!95 &742921001
 Animator:
@@ -1806,6 +1820,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &742921005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742920996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6e1eeff988f9748b782e280b007661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &752340120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1846,7 @@ GameObject:
   - component: {fileID: 752340124}
   - component: {fileID: 752340123}
   - component: {fileID: 752340122}
+  - component: {fileID: 752340127}
   m_Layer: 9
   m_Name: Hero3
   m_TagString: Player
@@ -1983,6 +2010,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &752340127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752340120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0218dfcf67b624987b8b380d6ca249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &767118931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1993,7 +2032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767118933}
   - component: {fileID: 767118932}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attack1HitBox
   m_TagString: attackHitBox
   m_Icon: {fileID: 0}
@@ -3288,7 +3327,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105417949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6e1eeff988f9748b782e280b007661, type: 3}
+  m_Script: {fileID: 11500000, guid: 74c2c89c325876347b365a63bf75f165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!58 &1105417952
@@ -3528,7 +3567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131822179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -194.9, y: -5.45, z: 0}
+  m_LocalPosition: {x: -195.02, y: -5.38, z: 0}
   m_LocalScale: {x: -13, y: 13, z: 1}
   m_Children:
   - {fileID: 34697742}
@@ -3977,6 +4016,7 @@ GameObject:
   - component: {fileID: 1475014604}
   - component: {fileID: 1475014603}
   - component: {fileID: 1475014602}
+  - component: {fileID: 1475014609}
   m_Layer: 9
   m_Name: Hero4
   m_TagString: Player
@@ -4171,6 +4211,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1475014609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475014600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915e1e848706f414eae3a367e28b79a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1490839089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4740,7 +4792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856408466}
   - component: {fileID: 1856408465}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attack1HitBox
   m_TagString: attackHitBox
   m_Icon: {fileID: 0}
@@ -4760,7 +4812,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.45634812, y: 0.04206562}
+  m_Offset: {x: 0.45634812, y: -0.13167757}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4771,7 +4823,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5971886, y: 0.57934356}
+  m_Size: {x: 0.5971886, y: 0.9268191}
   m_EdgeRadius: 0
 --- !u!4 &1856408466
 Transform:
@@ -5021,7 +5073,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cc62eead172ce2a4bbefbde66119962e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.191
+  m_Volume: 0.151
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5424,7 +5476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2061336886}
   - component: {fileID: 2061336885}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: attack1HitBox
   m_TagString: attackHitBox
   m_Icon: {fileID: 0}

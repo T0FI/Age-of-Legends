@@ -72,7 +72,7 @@ public class bulletScript : MonoBehaviour
 
     IEnumerator DestroyMiss()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
 

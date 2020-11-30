@@ -36,8 +36,8 @@ TagManager:
   - Player
   - bossMinion
   - heartLayer
-  - 
-  - 
+  - attackHitBoxPlayer
+  - attackHitBoxMinion
   - 
   - 
   - 

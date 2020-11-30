@@ -26,6 +26,8 @@ public class bossMinion : MonoBehaviour
     Transform Player4;
     Transform Player5;
 
+    public GameObject attackHitBox;
+
     public Vector2 lineOfSight;
     public LayerMask playerLayer;
     public bool canSeePlayer;
@@ -235,18 +237,20 @@ public class bossMinion : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.tag == "attackHitBox")
         {
             if (eHealth >= 1)
             {
+                StartCoroutine(Attacked());
                 FindObjectOfType<audioManager>().Play("Enemy TakeHit");
                 myAnim.Play("Minion TakeHit");
                 eHealth -= heroDamage.heroADamage;
                 print(eHealth);
-                StartCoroutine(Attacked());
+                
             }
 
             StartCoroutine(CheckHealth());
@@ -262,11 +266,11 @@ public class bossMinion : MonoBehaviour
     IEnumerator Attack()
     {
         if (eHealth >= 1)
-        {
+          {
             myAnim.Play("Minion Attack");
             yield return new WaitForSeconds(.5f);
             myAnim.Play("Minion Walk");
-        }
+          }
     }
 
     IEnumerator Walk()
@@ -285,6 +289,7 @@ public class bossMinion : MonoBehaviour
             speed = 5;
 
         }
+        yield return new WaitForSeconds(.2f);
     }
 
     IEnumerator CheckHealth()

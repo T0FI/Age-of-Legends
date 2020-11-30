@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2770353251548522714}
   - component: {fileID: 2459731955139585092}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: attackHitBox
-  m_TagString: Untagged
+  m_TagString: bossMinion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,9 +131,10 @@ GameObject:
   - component: {fileID: 7936265805884300877}
   - component: {fileID: 7936265805884300866}
   - component: {fileID: 7936265805884300873}
+  - component: {fileID: 7348739571070485156}
   m_Layer: 10
   m_Name: Boss Minion
-  m_TagString: bossMinion
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +274,7 @@ MonoBehaviour:
   wallChecker: {fileID: 7936265804739255392}
   jumpHeight: 7.42
   playertest: {fileID: 0}
+  attackHitBox: {fileID: 163373639094188883}
   lineOfSight: {x: 17.81, y: 8.2}
   playerLayer:
     serializedVersion: 2
@@ -303,6 +305,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &7348739571070485156
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936265805884300867}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1 &7936265806642915432
 GameObject:
   m_ObjectHideFlags: 0

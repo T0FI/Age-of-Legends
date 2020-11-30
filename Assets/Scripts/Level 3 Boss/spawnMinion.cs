@@ -17,12 +17,7 @@ public class spawnMinion : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-
-            spawnMinions();
-
-        }
+      
     }
 
 

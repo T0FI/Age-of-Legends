@@ -430,20 +430,20 @@ MonoBehaviour:
   groundChecker: {fileID: 831904711}
   wallChecker: {fileID: 1379467083}
   jumpHeight: 20
-  Player: {fileID: 0}
-  Player2: {fileID: 0}
-  Player3: {fileID: 0}
-  Player4: {fileID: 0}
-  Player5: {fileID: 0}
+  Player: {fileID: 1843591849}
+  Player2: {fileID: 134842976}
+  Player3: {fileID: 1383681710}
+  Player4: {fileID: 201268161}
+  Player5: {fileID: 76743590}
   lineOfSight: {x: 20, y: 6.9}
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  Hero1: {fileID: 0}
-  Hero2: {fileID: 0}
-  Hero3: {fileID: 0}
-  Hero4: {fileID: 0}
-  Hero5: {fileID: 0}
+  Hero1: {fileID: 1843591840}
+  Hero2: {fileID: 134842968}
+  Hero3: {fileID: 1383681703}
+  Hero4: {fileID: 201268152}
+  Hero5: {fileID: 76743582}
   groundCheck2: {fileID: 1851197046}
   boxSize: {x: 5.3, y: 0.1}
   Aggro: 0
@@ -955,7 +955,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.041647032}
+  m_Offset: {x: 0, y: 0.0126862675}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -966,7 +966,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.32670596}
+  m_Size: {x: 0.17, y: 0.26878446}
   m_EdgeRadius: 0
 --- !u!95 &134842973
 Animator:
@@ -2602,7 +2602,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.45634812, y: 0.04206562}
+  m_Offset: {x: 0.45634812, y: -0.12253955}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2613,7 +2613,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5971886, y: 0.57934356}
+  m_Size: {x: 0.5971886, y: 0.9085539}
   m_EdgeRadius: 0
 --- !u!4 &510151025
 Transform:
@@ -3102,9 +3102,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 24dc1269b3eeb7e42aa8ca43ee57c255, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.191
+  m_Volume: 0.151
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5200,20 +5200,20 @@ MonoBehaviour:
   groundChecker: {fileID: 1779706892}
   wallChecker: {fileID: 803712938}
   jumpHeight: 20.23
-  Player: {fileID: 0}
-  Player2: {fileID: 0}
-  Player3: {fileID: 0}
-  Player4: {fileID: 0}
-  Player5: {fileID: 0}
+  Player: {fileID: 1843591849}
+  Player2: {fileID: 134842976}
+  Player3: {fileID: 1383681710}
+  Player4: {fileID: 201268161}
+  Player5: {fileID: 76743590}
   lineOfSight: {x: 20, y: 6.9}
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  Hero1: {fileID: 0}
-  Hero2: {fileID: 0}
-  Hero3: {fileID: 0}
-  Hero4: {fileID: 0}
-  Hero5: {fileID: 0}
+  Hero1: {fileID: 1843591840}
+  Hero2: {fileID: 134842968}
+  Hero3: {fileID: 1383681703}
+  Hero4: {fileID: 201268152}
+  Hero5: {fileID: 76743582}
   groundCheck2: {fileID: 1759924621}
   boxSize: {x: 5.3, y: 0.1}
   Aggro: 0
@@ -8676,7 +8676,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: 0.043373637}
+  m_Offset: {x: 0.04, y: -0.008792922}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8687,7 +8687,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.47325265}
+  m_Size: {x: 0.17, y: 0.36891952}
   m_EdgeRadius: 0
 --- !u!95 &1843591845
 Animator:
@@ -9877,52 +9877,52 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1843591849}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Player2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 134842976}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Player3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1383681710}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Player4
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 201268161}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Player5
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76743590}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Hero1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1843591840}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Hero2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 134842968}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Hero3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1383681703}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Hero4
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 201268152}
     - target: {fileID: 5001623909628807365, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: Hero5
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76743582}
     - target: {fileID: 5301893410562445029, guid: 5ae1eaa66d598094bb39d843ae543981,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10264,52 +10264,52 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1843591849}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Player2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 134842976}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Player3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1383681710}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Player4
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 201268161}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Player5
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76743590}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Hero1
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1843591840}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Hero2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 134842968}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Hero3
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1383681703}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Hero4
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 201268152}
     - target: {fileID: 7928440255549627980, guid: 2db788c8b5188de4f8bb298418814767,
         type: 3}
       propertyPath: Hero5
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 76743582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db788c8b5188de4f8bb298418814767, type: 3}
 --- !u!1001 &8844234644881409013
