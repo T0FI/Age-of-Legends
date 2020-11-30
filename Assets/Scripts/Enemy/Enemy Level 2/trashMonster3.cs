@@ -265,7 +265,7 @@ public class trashMonster3 : MonoBehaviour
 
     IEnumerator CheckHealth()
     {
-
+        FindObjectOfType<audioManager>().Play("Enemy TakeHit");
         speed = 2;
 
 

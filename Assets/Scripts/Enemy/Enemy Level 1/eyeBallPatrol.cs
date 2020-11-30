@@ -51,8 +51,10 @@ public class eyeBallPatrol : MonoBehaviour
 
     IEnumerator attacked()
     {
+        FindObjectOfType<audioManager>().Play("Enemy TakeHit");
         if (eHealth > 0)
         {
+            
             myAnim.Play("eyeBall Monster TakeHit");
             speed = 0;
             yield return new WaitForSeconds(0.2f);

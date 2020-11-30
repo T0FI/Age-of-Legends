@@ -81,7 +81,7 @@ public class skeletonPatrol5 : MonoBehaviour
 
     IEnumerator attacked()
     {
-
+        FindObjectOfType<audioManager>().Play("Enemy TakeHit");
         speed = 0;
         yield return new WaitForSeconds(0.2f);
         speed = 2;
@@ -96,7 +96,10 @@ public class skeletonPatrol5 : MonoBehaviour
         }
     }
 
-
+    void axeSwingSound()
+    {
+        FindObjectOfType<audioManager>().Play("Skeleton Attack");
+    }
 
 
     void Update()

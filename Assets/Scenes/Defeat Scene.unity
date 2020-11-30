@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 1254471183}
   - component: {fileID: 1254471182}
   m_Layer: 0
-  m_Name: 13gameover5NL
+  m_Name: Background Music Defeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1282,7 +1282,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 328f76fd378aa3d44aabd9cc3299887c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.215
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1768,6 +1768,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1850803533
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4883587806358499945, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -173.56221
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.447804
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1553.7926
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883587806358499947, guid: a47f4ca8d362dca4880133dd0a8ed8de,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a47f4ca8d362dca4880133dd0a8ed8de, type: 3}
 --- !u!1 &1929738832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1761019938951115094, guid: 13c73d44aec40384dbf55cb0d313ceb2,

@@ -40,9 +40,12 @@ public class bossMinion : MonoBehaviour
     public Vector2 boxSize;
     public bool isGrounded;
 
+    public bool alive = true;
+
     Rigidbody2D enemyRB;
     Animator myAnim;
     GameObject Boss;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +65,7 @@ public class bossMinion : MonoBehaviour
         Hero2 = Player2.gameObject;
         Hero3 = Player3.gameObject;
         Hero4 = Player4.gameObject;
-        Hero5 = Player5.gameObject;
+        Hero5 = Player5.gameObject; 
 
         this.enemyRB = this.GetComponent<Rigidbody2D>();
         this.myAnim = this.GetComponent<Animator>();
@@ -84,16 +87,6 @@ public class bossMinion : MonoBehaviour
         {
             Petrolling();
         }
-
-        if (eHealth <= 0)
-        {
-            speed = 0;
-            myAnim.Play("Minion Death");
-            this.GetComponent<BoxCollider2D>().enabled = false;
-            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-
-        }
-
 
     }
 
@@ -124,23 +117,28 @@ public class bossMinion : MonoBehaviour
         if (isGrounded && (Hero1.active == true))
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
+            FindObjectOfType<audioManager>().Play("Slime Jump");
         }
 
         else if (isGrounded && (Hero2.active == true))
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer2, jumpHeight), ForceMode2D.Impulse);
+            FindObjectOfType<audioManager>().Play("Slime Jump");
         }
         else if (isGrounded && (Hero3.active == true))
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer3, jumpHeight), ForceMode2D.Impulse);
+            FindObjectOfType<audioManager>().Play("Slime Jump");
         }
         else if (isGrounded && (Hero4.active == true))
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer4, jumpHeight), ForceMode2D.Impulse);
+            FindObjectOfType<audioManager>().Play("Slime Jump");
         }
         else if (isGrounded && (Hero5.active == true))
         {
             enemyRB.AddForce(new Vector2(distanceFromPlayer5, jumpHeight), ForceMode2D.Impulse);
+            FindObjectOfType<audioManager>().Play("Slime Jump");
         }
 
     }
@@ -229,7 +227,8 @@ public class bossMinion : MonoBehaviour
 
     IEnumerator Jump()
     {
-        yield return new WaitForSeconds(2f);
+        
+        yield return new WaitForSeconds(0f);
         enemyRB.AddForce(new Vector2(0, 20));
         yield return new WaitForSeconds(.1f);
         enemyRB.AddForce(new Vector2(0, 0));
@@ -241,9 +240,15 @@ public class bossMinion : MonoBehaviour
 
         if (collision.gameObject.tag == "attackHitBox")
         {
-            myAnim.Play("Minion TakeHit");
-            eHealth -= heroDamage.heroADamage;
-            print(eHealth);
+            if (eHealth >= 1)
+            {
+                FindObjectOfType<audioManager>().Play("Enemy TakeHit");
+                myAnim.Play("Minion TakeHit");
+                eHealth -= heroDamage.heroADamage;
+                print(eHealth);
+                StartCoroutine(Attacked());
+            }
+
             StartCoroutine(CheckHealth());
         }
 
@@ -253,17 +258,15 @@ public class bossMinion : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       
-    }
 
     IEnumerator Attack()
     {
-        myAnim.Play("Minion Attack");
-        yield return new WaitForSeconds(.5f);
-        myAnim.Play("Minion Walk");
-
+        if (eHealth >= 1)
+        {
+            myAnim.Play("Minion Attack");
+            yield return new WaitForSeconds(.5f);
+            myAnim.Play("Minion Walk");
+        }
     }
 
     IEnumerator Walk()
@@ -273,17 +276,31 @@ public class bossMinion : MonoBehaviour
         myAnim.Play("Minion Walk");
     }
 
-    IEnumerator CheckHealth()
+    IEnumerator Attacked()
     {
+        if (eHealth >= 1)
+        {
+            speed = 2;
+            yield return new WaitForSeconds(.4f);
+            speed = 5;
 
-        speed = 2;
-
-
-
-        yield return new WaitForSeconds(.4f);
-        speed = 5;
-        myAnim.Play("Minion canSeePlayer");
+        }
     }
 
+    IEnumerator CheckHealth()
+    {
+        
+        if (eHealth <= 0)
+        {
+            speed = 0;
+            alive = false;
+            myAnim.SetBool("alive", alive);
+            this.GetComponent<BoxCollider2D>().enabled = false;
+            this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            yield return new WaitForSeconds(.4f);
+            Destroy(this.gameObject);
+        }
 
+        
+    }
 }

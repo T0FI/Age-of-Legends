@@ -11,6 +11,7 @@ public class bossAttack : MonoBehaviour
     bossWalk bossW;
     bossScript bossS;
 
+    int bossHealth;
     bool isPlayerRight;
     public bool isBossRight;
 
@@ -18,8 +19,10 @@ public class bossAttack : MonoBehaviour
 
     GameObject AttackR;
     GameObject AttackL;
+    GameObject Boss;
     Animator animAR;
     Animator animAL;
+
 
     public float forceMult = 200;
     Rigidbody2D rb;
@@ -32,8 +35,11 @@ public class bossAttack : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
+        
+
         AttackL = GameObject.Find("Attack Position L");
         AttackR = GameObject.Find("Attack Position R");
+        Boss = GameObject.Find("Boss");
 
         animAR = AttackR.GetComponent<Animator>();
         animAL = AttackL.GetComponent<Animator>();
@@ -43,16 +49,9 @@ public class bossAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        bossHealth = GetComponent<bossScript>().bossHealth;
+        
        // isPlayerRight = dPlayer.isRight;
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            
-            StartCoroutine(BossStage3());
-
-        }
 
     }
 
@@ -72,7 +71,8 @@ public class bossAttack : MonoBehaviour
 
     public IEnumerator BossStage2()
     {
-        
+        print("Boss Stage 2 Playing");
+        Boss.GetComponent<CapsuleCollider2D>().enabled = false;
         animator.Play("Boss Move");
         rb.AddForce(transform.right * forceMult);
         yield return new WaitForSeconds(.5f);
@@ -93,20 +93,25 @@ public class bossAttack : MonoBehaviour
         animator.Play("Boss Shoot");
         yield return new WaitForSeconds(2.9f);
 
+        Boss.GetComponent<CapsuleCollider2D>().enabled = true;
         animator.Play("Boss Move");
         transform.position = MArenaPosition.transform.position;
         yield return new WaitForSeconds(.4f);
         animator.Play("Boss Idle2");
 
         yield return new WaitForSeconds(3f);
-        
-        StartCoroutine(BossStage2());
 
+        if (bossHealth > 4000)
+        {
+            StartCoroutine(BossStage2());
+        }
     }
 
     public IEnumerator BossStage3()
     {
 
+        print("Boss Stage 3 Playing");
+        Boss.GetComponent<CapsuleCollider2D>().enabled = false;
         animator.Play("Boss Move");
         rb.AddForce(transform.right * forceMult);
         yield return new WaitForSeconds(.5f);
@@ -139,6 +144,7 @@ public class bossAttack : MonoBehaviour
         animAR.Play("minionSpawn");
         yield return new WaitForSeconds(.6f);
 
+        Boss.GetComponent<CapsuleCollider2D>().enabled = true;
         animator.Play("Boss Move");
         transform.position = MArenaPosition.transform.position;
         yield return new WaitForSeconds(.4f);
@@ -146,7 +152,10 @@ public class bossAttack : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
 
-        StartCoroutine(BossStage3());
+        if (bossHealth > 0)
+        {
+            StartCoroutine(BossStage3());
+        }   
 
     }
 

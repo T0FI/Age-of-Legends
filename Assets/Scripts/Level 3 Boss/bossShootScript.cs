@@ -24,6 +24,7 @@ public class bossShootScript : MonoBehaviour
 
     void ShootStage2()
     {
+        FindObjectOfType<audioManager>().Play("Boss Shoot");
         Instantiate(bullet, ShootingPos.transform.position, Quaternion.identity);
     }
 }

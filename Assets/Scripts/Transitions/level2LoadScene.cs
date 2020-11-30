@@ -14,7 +14,7 @@ public class level2LoadScene : MonoBehaviour
     IEnumerator loadLevel2()
     {
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(5);
 
     }

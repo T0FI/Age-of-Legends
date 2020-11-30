@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4883587806358499945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4883587806358499947}
+  - component: {fileID: 4883587806358499944}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4883587806358499947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883587806358499945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -173.56221, y: -5.447804, z: -1553.7926}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4883587806358499944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883587806358499945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ba9021a7bd6b94389dc592d1bc834f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: KingTrigger
+    clip: {fileID: 8300000, guid: aaa9345fc5b00ea40b9cb0abb4bfa928, type: 3}
+    volume: 0.247
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Attack Sword
+    clip: {fileID: 8300000, guid: 470f120ebacab5a42a3cfa98067301a6, type: 3}
+    volume: 0.146
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss TakeHit
+    clip: {fileID: 8300000, guid: 7e30d053d6089fb428c51b9eb4056c0e, type: 3}
+    volume: 0.786
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player TakeHit
+    clip: {fileID: 8300000, guid: f73dabafc6384344a95f8eeb8475bf1b, type: 3}
+    volume: 0.609
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Skeleton Attack
+    clip: {fileID: 8300000, guid: 790bf818db74b59498131dbca0b26d74, type: 3}
+    volume: 0.626
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button Press
+    clip: {fileID: 8300000, guid: 0ba3784f4c1d5df4689af04bc722b31a, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Jump
+    clip: {fileID: 8300000, guid: 47cf069a3d354a4448248f4609416960, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Arrow Collision
+    clip: {fileID: 8300000, guid: 2ec49fedcc9ba0048869bdd28e11059b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bow Shoot
+    clip: {fileID: 8300000, guid: 3dcd006c3652be24c97bc76b7a385974, type: 3}
+    volume: 0.407
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy TakeHit
+    clip: {fileID: 8300000, guid: edcc12f7b5a697b49b65a95ef99362bf, type: 3}
+    volume: 0.542
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss Bullet Explode
+    clip: {fileID: 8300000, guid: ec344f3e01ef1db4e884a71ee8b1666d, type: 3}
+    volume: 0.255
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss Death
+    clip: {fileID: 8300000, guid: 9662ae8a92300f448b9e4215dcda7de5, type: 3}
+    volume: 0.491
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Boss Shoot
+    clip: {fileID: 8300000, guid: 54f0c1375160bcb4bbdca9676c868228, type: 3}
+    volume: 0.285
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Slime Jump
+    clip: {fileID: 8300000, guid: 988998070f33667449536b37e0308ac2, type: 3}
+    volume: 0.512
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Heart Pickup
+    clip: {fileID: 8300000, guid: 013a5b9674d63784c8ec072abe0a7dd7, type: 3}
+    volume: 0.264
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

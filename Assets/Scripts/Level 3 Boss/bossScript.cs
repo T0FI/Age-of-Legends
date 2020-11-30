@@ -23,9 +23,15 @@ public class bossScript : MonoBehaviour
 
     public GameObject Boss;
 
-    int maxHealth = 100;
-    public static int bossHealth;
+    int maxHealth = 10000;
+    public int bossHealth;
     public bossHealth healthBar;
+    public bossAttack bossA;
+
+    public bool isAlive = true;
+    public bool Stage2 = false;
+    public bool Stage3 = false;
+    public bool Test = false;
 
     Animator animator;
 
@@ -43,12 +49,28 @@ public class bossScript : MonoBehaviour
     private void Update()
     {
 
+        if (bossHealth <= 6000)
+        {
+            StopCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+        }
+
+        if (bossHealth <= 0)
+        {
+            isAlive = false;
+            animator.SetBool("isAlive", isAlive);
+            StopAllCoroutines();
+            StopCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+            StopCoroutine(Boss.GetComponent<bossAttack>().BossStage3());
+            Boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            Boss.GetComponent<CapsuleCollider2D>().enabled = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "attackHitBox")
         {
+            FindObjectOfType<audioManager>().Play("Boss TakeHit");
             bossHealth -= heroDamage.heroADamage;
             healthBar.SetHealth(bossHealth);
             StartCoroutine(Attacked());
@@ -60,24 +82,66 @@ public class bossScript : MonoBehaviour
         animator.Play("Boss TakeHit");
         yield return new WaitForSeconds(.1f);
         checkHealth();
+        if (bossHealth > 6000)
+        {
+            animator.Play("Boss Attack1");
+        }
+        else
+        {
+            animator.Play("Boss Idle2");
+        }
     }
 
     void checkHealth()
     {
-        if (bossHealth <= 50)
+        
+        if (bossHealth <= 6000)
         {
-            StartCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+            Stage2 = true;
+        }
+
+        if (bossHealth <= 4000)
+        {
+            Stage2 = false;
+            Stage3 = true;
         }
 
         if (bossHealth <= 0)
         {
             StopAllCoroutines();
-            animator.Play("Boss Death");
+            StopCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+            StopCoroutine(Boss.GetComponent<bossAttack>().BossStage3());
+            isAlive = false;
+            animator.SetBool("isAlive", isAlive);
             Boss.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             Boss.GetComponent<CapsuleCollider2D>().enabled = false;
         }
+
+        if (Stage2 == true && Test == false)
+        {
+            StartCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+            Test = true;
+            print("Starting Stage 2");
+        }
+
+        if (Stage3 == true && Test == true)
+        {
+            Stage2 = false;
+            StopAllCoroutines();
+            StopCoroutine(Boss.GetComponent<bossAttack>().BossStage2());
+            StartCoroutine(Boss.GetComponent<bossAttack>().BossStage3());
+            Test = false;
+            print("Starting Stage 3");
+        }
+
+
+        
     }
 
+    void bossDeathSound()
+    {
+        FindObjectOfType<audioManager>().Play("Boss Death");
+    }
 
     public void FlipTowardsThePlayer()
     {

@@ -21,7 +21,6 @@ public class level2GoalScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             loadLevel.startTransition();
-            //myAnim.Play("Level 2 Transition");
             StartCoroutine(nextLevel());
         }
 
@@ -31,7 +30,7 @@ public class level2GoalScript : MonoBehaviour
     {
 
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(6);
 
     }
 }

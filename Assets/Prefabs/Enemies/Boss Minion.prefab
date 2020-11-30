@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.22
-  eHealth: 100
+  eHealth: 180
   circleRadius: 0.2
   groundLayer:
     serializedVersion: 2
@@ -281,6 +281,7 @@ MonoBehaviour:
   groundCheck2: {fileID: 7936265806642915435}
   boxSize: {x: 1, y: 0.1}
   isGrounded: 0
+  alive: 1
 --- !u!50 &7936265805884300873
 Rigidbody2D:
   serializedVersion: 4

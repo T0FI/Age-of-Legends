@@ -11,6 +11,7 @@ public class heartScript : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
+            FindObjectOfType<audioManager>().Play("Heart Pickup");
             Destroy(this.gameObject);
 
 

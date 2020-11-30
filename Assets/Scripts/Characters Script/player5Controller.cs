@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 public class player5Controller : MonoBehaviour
 {
 
-    //https://www.youtube.com/watch?v=-dMtWZsjX6g&ab_channel=GucioDevs
-
-
     //Movement variables
     public float maxSpeed = 18;
 
@@ -100,6 +97,7 @@ public class player5Controller : MonoBehaviour
 
         if (grounded && Input.GetAxis("Jump") > 0)
         {
+            FindObjectOfType<audioManager>().Play("Player Jump");
             grounded = false;
             myAnim.SetBool("isGrounded", grounded);
             myRB.AddForce(new Vector2(0, jumpHeight));
@@ -117,7 +115,6 @@ public class player5Controller : MonoBehaviour
             {
                 StartCoroutine(Attacked());
 
-                print("yes");
                 currentHealth -= 1000;
                 myAnim.Play("Hero5 TakeHit");
                 healthBar.SetHealth(currentHealth);
@@ -134,13 +131,12 @@ public class player5Controller : MonoBehaviour
             {
                 StartCoroutine(Attacked());
 
-                print("yes");
                 currentHealth -= 10;
                 myAnim.Play("Hero5 TakeHit");
                 healthBar.SetHealth(currentHealth);
 
                 myAnim.Play("Herohurt");
-                StartCoroutine(kbackScript.instance.Knockback(0.02f, 1400, kbackScript.instance.transform.position));
+                StartCoroutine(kbackScriptP5.instance.Knockback(0.02f, 1400, kbackScriptP5.instance.transform.position));
                 StartCoroutine(Idle());
 
             }
@@ -152,13 +148,12 @@ public class player5Controller : MonoBehaviour
             {
                 StartCoroutine(Attacked());
 
-                print("yes");
                 currentHealth -= 10;
                 myAnim.Play("Hero5 TakeHit");
                 healthBar.SetHealth(currentHealth);
 
                 myAnim.Play("Herohurt");
-                StartCoroutine(kbackScript.instance.Knockback(0.02f, 1400, kbackScript.instance.transform.position));
+                StartCoroutine(kbackScriptP5.instance.Knockback(0.02f, 1400, kbackScriptP5.instance.transform.position));
                 StartCoroutine(Idle());
 
             }
@@ -173,25 +168,25 @@ public class player5Controller : MonoBehaviour
 
         if (other.gameObject.tag == "Heart")
         {
+            
             currentHealth += 20;
             healthBar.SetHealth(currentHealth);
 
         }
 
 
-            if (other.gameObject.tag == "skeletonHitBox")
+        if (other.gameObject.tag == "skeletonHitBox")
         {
             if (isAttacked == false)
             {
                 StartCoroutine(Attacked());
 
-                print("yes");
                 currentHealth -= 20;
                 myAnim.Play("Hero5 TakeHit");
                 healthBar.SetHealth(currentHealth);
 
                 myAnim.Play("Herohurt");
-                StartCoroutine(kbackScript.instance.Knockback(0.02f, 1400, kbackScript.instance.transform.position));
+                StartCoroutine(kbackScriptP5.instance.Knockback(0.02f, 1400, kbackScriptP5.instance.transform.position));
 
                 StartCoroutine(Idle());
 
@@ -204,13 +199,46 @@ public class player5Controller : MonoBehaviour
             {
                 StartCoroutine(Attacked());
 
-                print("yes");
                 currentHealth -= 5;
                 myAnim.Play("Hero5 TakeHit");
                 healthBar.SetHealth(currentHealth);
 
                 myAnim.Play("Herohurt");
-                StartCoroutine(kbackScript.instance.Knockback(0.02f, 1400, kbackScript.instance.transform.position));
+                StartCoroutine(kbackScriptP5.instance.Knockback(0.02f, 1400, kbackScriptP5.instance.transform.position));
+                StartCoroutine(Idle());
+
+            }
+        }
+        
+        if (other.gameObject.tag == "bossBullet")
+        {
+            if (isAttacked == false)
+            {
+                StartCoroutine(Attacked());
+
+                currentHealth -= 10;
+                myAnim.Play("Hero5 TakeHit");
+                healthBar.SetHealth(currentHealth);
+
+                myAnim.Play("Herohurt");
+                StartCoroutine(kbackScriptP5.instance.Knockback(0.02f, 1400, kbackScriptP5.instance.transform.position));
+                StartCoroutine(Idle());
+
+            }
+        }
+
+        if (other.gameObject.tag == "bossMinion")
+        {
+            if (isAttacked == false)
+            {
+                StartCoroutine(Attacked());
+
+                currentHealth -= 2;
+                myAnim.Play("Hero5 TakeHit");
+                healthBar.SetHealth(currentHealth);
+
+                myAnim.Play("Herohurt");
+                StartCoroutine(kbackScriptP5.instance.Knockback(0.02f, 1400, kbackScriptP5.instance.transform.position));
                 StartCoroutine(Idle());
 
             }
@@ -222,6 +250,7 @@ public class player5Controller : MonoBehaviour
 
     IEnumerator Attacked()
     {
+        FindObjectOfType<audioManager>().Play("Player TakeHit");
         isAttacked = true;
         yield return new WaitForSeconds(1f);
         isAttacked = false;

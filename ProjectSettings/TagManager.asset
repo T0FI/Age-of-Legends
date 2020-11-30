@@ -21,6 +21,8 @@ TagManager:
   - bPosR
   - AttackPosR
   - AttackPosL
+  - bossBullet
+  - bossMinion
   layers:
   - Default
   - TransparentFX
@@ -32,8 +34,8 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
-  - 
+  - bossMinion
+  - heartLayer
   - 
   - 
   - 

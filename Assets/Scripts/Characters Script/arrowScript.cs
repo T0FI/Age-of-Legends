@@ -30,7 +30,9 @@ public class arrowScript : MonoBehaviour
 
         if(collisionGameObject.name != "Player")
         {
+            FindObjectOfType<audioManager>().Play("Arrow Collision");
             Die();
+
         }
     }
     IEnumerator Timer()

@@ -31,10 +31,14 @@ public class selectorScript : MonoBehaviour
     public int CharacterInt = 1;
     private SpriteRenderer sHero1Render, sHero2Render, sHero3Render, sHero4Render, sHero5Render;
 
+    GameObject mainMenuMusic;
+
     private readonly string selectedHero = "SelectedHero";
 
     private void Awake()
     {
+        mainMenuMusic = GameObject.Find("Main Menu Music");
+
         CharacterPosition = sHero1.transform.position;
         CharacterPosition2 = sHero2Pos.transform.position;
         CharacterPosition3 = sHero3Pos.transform.position;
@@ -227,6 +231,8 @@ public class selectorScript : MonoBehaviour
 
     public void ChangeScene()
     {
+        Destroy(mainMenuMusic);
+        FindObjectOfType<audioManager>().Play("Button Press");
         SceneManager.LoadScene(2);
     }
 }

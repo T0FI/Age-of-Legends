@@ -265,6 +265,7 @@ public class trashMonster4 : MonoBehaviour
 
     IEnumerator Attacked()
     {
+        FindObjectOfType<audioManager>().Play("Enemy TakeHit");
         speed = 2;
         yield return new WaitForSeconds(.4f);
         speed = 5;

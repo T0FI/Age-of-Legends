@@ -22,6 +22,7 @@ public class bulletImpact : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<audioManager>().Play("Boss Bullet Explode");
             animator.Play("Boss Bullet Impact");
             this.GetComponent<CircleCollider2D>().enabled = false;
             StartCoroutine(Destroy());

@@ -15,6 +15,7 @@ public class mainMenuStart2 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            FindObjectOfType<audioManager>().Play("Button Press");
             LoadNextLevel();
             //DestroyTransition();
             //Destroy(GameObject.FindWithTag("tempTransition"));
